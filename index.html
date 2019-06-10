@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/main.css" class="rel">
+</head>
+<body>
+    <div class="wrap_morning"></div>
+    <div class="wrap"></div>
+    <div class="btn"></div>
+    <div class="content">
+            <ui class="content__articles">
+                <li class="content__item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde in temporibus impedit cumque saepe facilis voluptatem porro quaerat tenetur, ab aspernatur labore facere blanditiis dolores deleniti vero fugiat recusandae reprehenderit.</li>
+                <li class="content__item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde in temporibus impedit cumque saepe facilis voluptatem porro quaerat tenetur, ab aspernatur labore facere blanditiis dolores deleniti vero fugiat recusandae reprehenderit.</li>
+                <li class="content__item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde in temporibus impedit cumque saepe facilis voluptatem porro quaerat tenetur, ab aspernatur labore facere blanditiis dolores deleniti vero fugiat recusandae reprehenderit.</li>
+                <li class="content__item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde in temporibus impedit cumque saepe facilis voluptatem porro quaerat tenetur, ab aspernatur labore facere blanditiis dolores deleniti vero fugiat recusandae reprehenderit.</li>
+                <li class="content__item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde in temporibus impedit cumque saepe facilis voluptatem porro quaerat tenetur, ab aspernatur labore facere blanditiis dolores deleniti vero fugiat recusandae reprehenderit.</li>
+                <li class="content__item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde in temporibus impedit cumque saepe facilis voluptatem porro quaerat tenetur, ab aspernatur labore facere blanditiis dolores deleniti vero fugiat recusandae reprehenderit.</li>
+                <li class="content__item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde in temporibus impedit cumque saepe facilis voluptatem porro quaerat tenetur, ab aspernatur labore facere blanditiis dolores deleniti vero fugiat recusandae reprehenderit.</li>
+                <li class="content__item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde in temporibus impedit cumque saepe facilis voluptatem porro quaerat tenetur, ab aspernatur labore facere blanditiis dolores deleniti vero fugiat recusandae reprehenderit.</li>
+                <li class="content__item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde in temporibus impedit cumque saepe facilis voluptatem porro quaerat tenetur, ab aspernatur labore facere blanditiis dolores deleniti vero fugiat recusandae reprehenderit.</li>
+                <li class="content__item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde in temporibus impedit cumque saepe facilis voluptatem porro quaerat tenetur, ab aspernatur labore facere blanditiis dolores deleniti vero fugiat recusandae reprehenderit.</li>
+            </ui>
+        </div>
+    <script>
+        //timer
+        setInterval(function()
+        {
+            let hours = new Date().getHours();
+            let minutes = new Date().getMinutes();
+            let content__items = document.querySelectorAll('.content__item');
+            if(hours >= 20 && minutes >= 40){
+                wrap.style.opacity ='0';
+                for(let i = 0 ; i<content__items.length; i++){
+                    content__items[i].style.backgroundColor = 'white';
+                    content__items[i].style.color = 'black';
+                }
+            }
+        }, 1000);
+        //take element from three (index.html)
+        
+    let btn = document.querySelector('.btn');
+    let wrap = document.querySelector('.wrap');
+    btn.onclick = function()
+    {
+        if(wrap.style.opacity =='1')
+        {
+            wrap.style.opacity = '0';
+        } 
+        else
+        {
+            wrap.style.opacity = '1';
+        }
+    }
+    </script>
+</body>
+</html>
